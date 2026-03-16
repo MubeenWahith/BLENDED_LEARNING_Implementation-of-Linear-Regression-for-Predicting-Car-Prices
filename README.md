@@ -55,7 +55,7 @@ plt.grid(True)
 plt.show()
 residuals = y_test - y_pred
 dw_test = sm.stats.durbin_watson(residuals)
-print(f"\nDurbin-Warson Statistic: {dw_test:.2f}", 
+print(f"\nDurbin-Watson Statistic: {dw_test:.2f}", 
       "\n(Values Close to 2 indicate no autocorrelation)")
 plt.figure(figsize=(10, 5))
 sns.residplot(x=y_pred, y=residuals, lowess=True, line_kws={'color': 'red'})
